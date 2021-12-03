@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  unalmeet_chat_ms:
+    image: ${DOCKER_REGISTRY-}unalmeetchatms
+    build:
+      context: .
+      dockerfile: unalmeet_chat_ms/Dockerfile
+
+  mongo:
+    image: mongo:4.4
+    container_name: 'unalmeet_chat_db'
